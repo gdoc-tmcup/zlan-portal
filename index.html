@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Portail trajets & hébergement - ZLAN 2023</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Portail des trajets et hébergement pour la ZLAN 2023">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gdoc-zlan.fr/">
+  <meta property="og:image" content="https://gdoc-zlan.fr/img/nom-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      text-align: center;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #36393f;
+    }
+
+    main {
+      margin: auto;
+      max-width: 100%;
+      width: 1000px;
+    }
+
+    img {
+      margin-bottom: 10px;
+    }
+
+    #links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    #links a {
+      width: 49%;
+    }
+
+    .link {
+      border: 2px solid white;
+      text-decoration: none;
+      background-color: #36393f;
+      transition: 0.4s;
+      padding: 0 5px;
+    }
+
+    .link:hover {
+      background-color: rgba(62, 249, 65, 0.5);
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: unset;
+      margin-bottom: 0;
+    }
+
+    .link-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    .link-subtitle {
+      margin-top: 3px;
+    }
+
+    #discord {
+      width: 55%;
+      margin: 10px auto 0;
+      display: block;
+    }
+
+    #discord br {
+      display: none;
+    }
+
+    #discord .link-title {
+      margin-bottom: 16px;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      margin-top: 5px;
+    }
+
+    @media screen and (max-width: 750px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      #links {
+        flex-direction: column;
+      }
+
+      #links a, #discord {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      #links a:last-child {
+        margin-top: 10px;
+      }
+
+      .link-title {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media screen and (max-width: 930px) {
+      #discord br {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Portail d'organisation des trajets / hébergements pour la ZLAN 2023</h1>
+
+  <main>
+    <img src="img/nom-image.jpg" alt="A compléter" width="100%" />
+
+    <div id="links">
+      <a href="https://docs.google.com/spreadsheets/d/1DAx2guDVZkZw80rxjvtATnA9uTlkv3bXulEJg1eUrmk/edit" id="gdoc" class="link">
+        <h2>Vous souhaitez proposer/demander un trajet<br>ou vous êtes intéressé(e) par un trajet</h2>
+        <p class="link-title">Accéder au GDoc</p>
+        <p class="link-subtitle">(demande d'accès nécessaire)</p>
+      </a>
+      <a href="https://www.google.fr/maps/d/viewer?mid=15I6Eo-lP9Eis1KRiS2o08jR-2hR8UjQ" id="map" class="link">
+        <h2>Vous souhaitez visualiser un résumé<br>des trajets proposés/demandés</h2>
+        <p class="link-title">Accéder à la carte Google Maps</p>
+        <p class="link-subtitle">(public - accès en lecture uniquement)</p>
+      </a>
+    </div>
+
+    <a href="https://discord.gg/dHjCMDQ7TV" id="discord" class="link">
+      <h2>Besoin d'aide pour utiliser le GDoc ? <br>Un problème sur la carte ?</h2>
+      <p class="link-title">Accéder au Discord d'assistance</p>
+    </a>
+  </main>
+
+  <footer>Ces outils ont été créés par un viewer et ne sont affiliés ni à ZT Production, ni à ZQSD Productions.</footer>
+</body>
+
+</html>
