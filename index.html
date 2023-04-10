@@ -106,6 +106,26 @@
       margin-top: 5px;
     }
 
+    @media screen and (max-width: 600px) {
+      #image-desktop {
+        display: none;
+      }
+
+      #image-mobile {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      #image-desktop {
+        display: block;
+      }
+
+      #image-mobile {
+        display: none;
+      }
+    }
+
     @media screen and (max-width: 750px) {
       h1 {
         font-size: 1.5rem;
@@ -135,13 +155,37 @@
       }
     }
   </style>
+
+  <script type="application/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+      let screenType = window.innerWidth < 600 ? "mobile" : "desktop";
+      const mobileImage = document.getElementById("image-mobile");
+      const desktopImage = document.getElementById("image-desktop");
+      updateAriaHiddenAttributes(screenType);
+
+      function updateAriaHiddenAttributes(screenType)
+      {
+        mobileImage.setAttribute("aria-hidden", screenType === "desktop");
+        desktopImage.setAttribute("aria-hidden", screenType === "mobile");
+      }
+
+      window.addEventListener("resize", () => {
+        let newScreenType = window.innerWidth < 600 ? "mobile" : "desktop";
+        if(newScreenType !== screenType) {
+          screenType = newScreenType;
+          updateAriaHiddenAttributes(screenType);
+        }
+      });
+    });
+  </script>
 </head>
 
 <body>
   <h1>Portail d'organisation des trajets / hébergements pour la ZLAN 2023</h1>
 
   <main>
-    <img src="img/visuel-zlan-2023.jpg" alt="Visuel de la ZLAN 2023 avec les informations essentielles" width="100%" />
+    <img src="img/visuel-zlan-2023.jpg" alt="Visuel de la ZLAN 2023 avec les informations essentielles" width="100%" id="image-desktop" loading="lazy" />
+    <img src="img/visuel-zlan-2023-mobile.jpg" alt="Bannière de la ZLAN 2023" width="100%" id="image-mobile" loading="lazy" />
 
     <div id="links">
       <a href="https://docs.google.com/spreadsheets/d/1DAx2guDVZkZw80rxjvtATnA9uTlkv3bXulEJg1eUrmk/edit" id="gdoc" class="link">
