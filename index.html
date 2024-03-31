@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Portail trajets & hébergements - ZLAN 2023</title>
+  <title>Portail trajets & hébergements - ZLAN 2024</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="ZLAN 2023 - Portail communautaire (participants et spectateurs)">
+  <meta property="og:title" content="ZLAN 2024 - Portail communautaire (participants et spectateurs)">
   <meta property="og:description" content="Crée/cherche un covoiturage, et propose/rejoins des trajets en train/car et des hébergements !">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gdoc-zlan.fr/">
-  <meta property="og:image" content="https://gdoc-zlan.fr/img/logo-zlan-white-grey-bg.webp">
+  <meta property="og:image" content="https://gdoc-zlan.fr/img/logo-zlan-2024-white-grey-bg.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,27 +47,27 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-    }
 
-    #links a {
-      width: 49%;
+      & a {
+        width: 49%;
+      }
     }
 
     .link {
-      border: 4px solid #acff41;
+      border: 4px solid #67ff00;
       text-decoration: none;
       background-color: #131313;
       transition: 0.4s;
       padding: 0 5px;
-    }
 
-    .link:hover {
-      background-color: #acff41;
-      border-color: #acff41;
-    }
+      &:hover {
+        background-color: #67ff00;
+        border-color: #67ff00;
 
-    .link:hover * {
-      color: black;
+        & * {
+          color: black;
+        }
+      }
     }
 
     h2 {
@@ -91,10 +91,10 @@
       width: 55%;
       margin: 10px auto 0;
       display: block;
-    }
 
-    #discord br {
-      display: none;
+      & br {
+        display: none;
+      }
     }
 
     #discord .link-title {
@@ -155,45 +155,22 @@
       }
     }
   </style>
-
-  <script type="application/javascript">
-    document.addEventListener("DOMContentLoaded", () => {
-      let screenType = window.innerWidth < 600 ? "mobile" : "desktop";
-      const mobileImage = document.getElementById("image-mobile");
-      const desktopImage = document.getElementById("image-desktop");
-      updateAriaHiddenAttributes(screenType);
-
-      function updateAriaHiddenAttributes(screenType)
-      {
-        mobileImage.setAttribute("aria-hidden", screenType === "desktop");
-        desktopImage.setAttribute("aria-hidden", screenType === "mobile");
-      }
-
-      window.addEventListener("resize", () => {
-        let newScreenType = window.innerWidth < 600 ? "mobile" : "desktop";
-        if(newScreenType !== screenType) {
-          screenType = newScreenType;
-          updateAriaHiddenAttributes(screenType);
-        }
-      });
-    });
-  </script>
 </head>
 
 <body>
-  <h1>Portail d'organisation des trajets / hébergements pour la ZLAN 2023</h1>
+  <h1>Portail d'organisation des trajets / hébergements pour la ZLAN 2024</h1>
 
   <main>
-    <img src="img/visuel-zlan-2023.jpg" alt="Visuel de la ZLAN 2023 avec les informations essentielles" width="100%" id="image-desktop" loading="lazy" />
-    <img src="img/visuel-zlan-2023-mobile.jpg" alt="Bannière de la ZLAN 2023" width="100%" id="image-mobile" loading="lazy" />
+    <img src="img/visuel-zlan-2024.jpg" alt="Visuel de la ZLAN 2024 avec les informations essentielles" width="100%" id="image-desktop" loading="lazy" />
+    <img src="img/visuel-zlan-2024-mobile.jpg" alt="Bannière de la ZLAN 2024" width="100%" id="image-mobile" loading="lazy" />
 
     <div id="links">
-      <a href="https://docs.google.com/spreadsheets/d/1DAx2guDVZkZw80rxjvtATnA9uTlkv3bXulEJg1eUrmk/edit" id="gdoc" class="link">
-        <h2>Tu souhaites proposer/demander un trajet<br>ou tu es intéressé(e) par un trajet</h2>
+      <a href="https://docs.google.com/spreadsheets/d/1iwTTCQcI2foEwti5zTomL4wAYxi35T13Gd8GqMzzHdY/edit" id="gdoc" class="link">
+        <h2>Tu souhaites proposer/demander un trajet<br>ou un trajet proposé t'intéresse</h2>
         <p class="link-title">Accéder au GDoc</p>
         <p class="link-subtitle">(demande d'accès nécessaire)</p>
       </a>
-      <a href="https://www.google.fr/maps/d/viewer?mid=15I6Eo-lP9Eis1KRiS2o08jR-2hR8UjQ" id="map" class="link">
+      <a href="https://www.google.fr/maps/d/viewer?mid=13x7TFlEcZeDeTLPuifWOCjxtx0xhYx4" id="map" class="link">
         <h2>Tu souhaites visualiser un résumé<br>des trajets proposés/demandés</h2>
         <p class="link-title">Accéder à la carte Google Maps</p>
         <p class="link-subtitle">(public - accès en lecture uniquement)</p>
